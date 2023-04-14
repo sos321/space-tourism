@@ -1,0 +1,9 @@
+node_modules
+dist
+
+*.sketch
+*.fig
+*.xd
+
+.DS_Store
+.prettierignore
