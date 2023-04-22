@@ -7,7 +7,7 @@ import Index from "./pages/index";
 import Destination from "./pages/destination";
 import Navigation from "./components/navigation";
 import Technology from "./pages/technology";
-import Crew from "./pages/Crew";
+import Crew from "./pages/crew";
 import ErrorPage from "./pages/error-page";
 
 const router = createBrowserRouter([
