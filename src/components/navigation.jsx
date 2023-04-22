@@ -28,7 +28,7 @@ function Navigation() {
           ))}
         </div>
       </div>
-      <div className="m-20 bg-red-700">
+      <div className="mt-64 mx-36">
         <Outlet />
       </div>
     </Fragment>
