@@ -8,7 +8,7 @@ function Navigation() {
     <Fragment>
       <div className="flex items-center justify-between h-16 mt-16">
         <img src={logo} alt="Logo" className="ml-12" />
-        <div className="h-[1px] bg-white w-3/12 opacity-25 z-20 absolute left-72"></div>
+        <div className="hr:w-2/12 h-[1px] bg-white w-3/12 opacity-25 z-20 absolute left-72"></div>
         <div className="flex items-center justify-center w-7/12 h-24 gap-20 bg-white backdrop-blur-2xl bg-opacity-5">
           {["Home", "Destination", "Crew", "Technology"].map((nav, i) => (
             <NavLink

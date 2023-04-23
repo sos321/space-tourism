@@ -17,3 +17,9 @@
 * {
   box-sizing: border-box;
 }
+
+@media (min-width: 112rem) {
+  html {
+    font-size: 20px;
+  }
+}
