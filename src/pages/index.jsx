@@ -1,7 +1,12 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-import backgroundImg from "./../assets/home/background-home-desktop.jpg";
+import backgroundImgDesktop from "./../assets/home/background-home-desktop.jpg";
+import backgroundImgTablet from "./../assets/home/background-home-tablet.jpg";
+import backgroundImgMobile from "./../assets/home/background-home-mobile.jpg";
+
+import Picture from "../components/picture";
+
 import { Link } from "react-router-dom";
 
 function Index() {
@@ -16,13 +21,14 @@ function Index() {
   return (
     <Fragment>
       {createPortal(
-        <img
-          src={backgroundImg}
-          className="absolute top-0 left-0 w-screen h-screen pointer-events-none -z-40"
+        <Picture
+          desktop={backgroundImgDesktop}
+          tablet={backgroundImgTablet}
+          mobile={backgroundImgMobile}
         />,
         document.getElementById("img-root")
       )}
-      <div className="flex items-end justify-between pr-5 m-auto max-w-7xl">
+      <div className="flex items-end justify-between pr-5 mx-auto mt-60 max-w-7xl">
         <div className="flex flex-col">
           <h2 className="text-3xl tracking-widest uppercase">
             So, you want to travel to

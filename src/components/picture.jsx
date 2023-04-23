@@ -1,0 +1,20 @@
+export default function Picture(props) {
+  return (
+    <picture className="absolute top-0 left-0 w-screen h-screen pointer-events-none -z-40">
+      <source
+        className="absolute block object-cover w-screen h-screen"
+        media="(min-width: 1440px)"
+        srcSet={props.desktop}
+      />
+      <source
+        className="absolute block object-cover w-screen h-screen"
+        media="(min-width: 770px)"
+        srcSet={props.tablet}
+      />
+      <img
+        className="absolute block object-cover w-screen h-screen"
+        src={props.mobile}
+      />
+    </picture>
+  );
+}

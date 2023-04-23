@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 
+import NavLine from "./nav-line";
+
 import logo from "./../assets/shared/logo.svg";
 
 function Navigation() {
@@ -8,7 +10,7 @@ function Navigation() {
     <Fragment>
       <div className="flex items-center justify-between h-16 mt-16">
         <img src={logo} alt="Logo" className="ml-12" />
-        <div className="hr:w-2/12 h-[1px] bg-white w-3/12 opacity-25 z-20 absolute left-72"></div>
+        <NavLine />
         <div className="flex items-center justify-center w-7/12 h-24 gap-20 bg-white backdrop-blur-2xl bg-opacity-5">
           {["Home", "Destination", "Crew", "Technology"].map((nav, i) => (
             <NavLink
@@ -28,7 +30,7 @@ function Navigation() {
           ))}
         </div>
       </div>
-      <div className="mt-64 mx-36">
+      <div className="mt-48 mx-36">
         <Outlet />
       </div>
     </Fragment>
