@@ -1,5 +1,6 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
 
 import backgroundImgDesktop from "./../assets/home/background-home-desktop.jpg";
 import backgroundImgTablet from "./../assets/home/background-home-tablet.jpg";
@@ -28,7 +29,13 @@ function Index() {
         />,
         document.getElementById("img-root")
       )}
-      <div className="flex items-end justify-between pr-5 mx-auto mt-60 max-w-7xl">
+      <motion.div
+        className="flex items-end justify-between pr-5 mx-auto mt-60 max-w-7xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
         <div className="flex flex-col">
           <h2 className="text-3xl tracking-widest uppercase">
             So, you want to travel to
@@ -52,7 +59,7 @@ function Index() {
         >
           Explore
         </Link>
-      </div>
+      </motion.div>
     </Fragment>
   );
 }

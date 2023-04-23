@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
 
 import Picture from "../components/picture";
 import Nav from "../components/secondary-nav";
@@ -36,7 +37,13 @@ function Destination() {
         />,
         document.getElementById("img-root")
       )}
-      <div className="m-auto max-w-7xl">
+      <motion.div
+        className="m-auto max-w-7xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
         <h3 className="flex gap-3 mb-8 text-2xl tracking-widest uppercase">
           <span className="font-bold text-gray-500">01</span> Pick your
           destination
@@ -76,7 +83,7 @@ function Destination() {
             alt={data.destinations[planet].name}
           />
         </div>
-      </div>
+      </motion.div>
     </Fragment>
   );
 }
