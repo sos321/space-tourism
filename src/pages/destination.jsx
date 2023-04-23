@@ -1,19 +1,82 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
-import backgroundImg from "./../assets/destination/background-destination-desktop.jpg";
+import Picture from "../components/picture";
+import Nav from "../components/secondary-nav";
+
+import data from "../data/data.json";
+
+import backgroundImgDesktop from "./../assets/destination/background-destination-desktop.jpg";
+import backgroundImgTablet from "./../assets/destination/background-destination-tablet.jpg";
+import backgroundImgMobile from "./../assets/destination/background-destination-mobile.jpg";
 
 function Destination() {
+  const [planet, setPlanet] = useState(0);
+  const [image, setImage] = useState("");
+
+  function clickHandler(idx) {
+    setPlanet(idx);
+  }
+
+  useEffect(() => {
+    const url = `./../assets/destination/image-${data.destinations[
+      planet
+    ].name.toLowerCase()}.webp`;
+
+    setImage(new URL(url, import.meta.url).href);
+  }, [planet]);
+
   return (
     <Fragment>
       {createPortal(
-        <img
-          src={backgroundImg}
-          className="absolute top-0 left-0 w-screen h-screen -z-40"
+        <Picture
+          desktop={backgroundImgDesktop}
+          tablet={backgroundImgTablet}
+          mobile={backgroundImgMobile}
         />,
         document.getElementById("img-root")
       )}
-      <h1>This is the Destinations page</h1>
+      <div className="m-auto max-w-7xl">
+        <h3 className="flex gap-3 mb-8 text-2xl tracking-widest uppercase">
+          <span className="font-bold text-gray-500">01</span> Pick your
+          destination
+        </h3>
+        <div className="flex flex-row-reverse items-center justify-between">
+          <div className="">
+            <Nav planet={planet} onClick={clickHandler} />
+            <h2 className="mb-6 uppercase text-8xl font-heading">
+              {data.destinations[planet].name}
+            </h2>
+            <p className="max-w-lg mb-16 text-lg text-justify">
+              {data.destinations[planet].description}
+            </p>
+            <hr className="mb-7 h-[0.5px]" />
+            <div className="flex gap-16">
+              <div>
+                <p className="mb-2 tracking-wider uppercase text-md">
+                  Avg. Distance
+                </p>
+                <h5 className="text-3xl tracking-wider uppercase font-heading">
+                  {data.destinations[planet].distance}
+                </h5>
+              </div>
+              <div>
+                <p className="mb-2 tracking-wider uppercase text-md">
+                  Est. Travel Time
+                </p>
+                <h5 className="text-3xl tracking-wider uppercase font-heading">
+                  {data.destinations[planet].travel}
+                </h5>
+              </div>
+            </div>
+          </div>
+          <img
+            className="w-5/12 p-10 ml-8"
+            src={image}
+            alt={data.destinations[planet].name}
+          />
+        </div>
+      </div>
     </Fragment>
   );
 }
