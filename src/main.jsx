@@ -1,43 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
+import Router from "./router";
 
 import "./static/index.css";
-import Index from "./pages/index";
-import Destination from "./pages/destination";
-import Navigation from "./components/navigation";
-import Technology from "./pages/technology";
-import Crew from "./pages/crew";
-import ErrorPage from "./pages/error-page";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Navigation />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <Index />,
-      },
-      {
-        path: "/destination",
-        element: <Destination />,
-      },
-      {
-        path: "/technology",
-        element: <Technology />,
-      },
-      {
-        path: "/crew",
-        element: <Crew />,
-      },
-    ],
-  },
-]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AnimatePresence>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </AnimatePresence>
   </React.StrictMode>
 );
