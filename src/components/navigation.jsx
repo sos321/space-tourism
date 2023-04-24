@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 
-import NavLine from "./nav-line";
+import NavLine from "./UI/nav-line";
 
 import logo from "./../assets/shared/logo.svg";
 

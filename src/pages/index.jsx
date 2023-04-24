@@ -1,14 +1,13 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+
+import Picture from "../components/picture";
+import Page from "../components/UI/page";
 
 import backgroundImgDesktop from "./../assets/home/background-home-desktop.jpg";
 import backgroundImgTablet from "./../assets/home/background-home-tablet.jpg";
 import backgroundImgMobile from "./../assets/home/background-home-mobile.jpg";
-
-import Picture from "../components/picture";
-import Page from "../components/UI/page";
 
 function Index() {
   const headingRef = useRef();
