@@ -1,14 +1,14 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import backgroundImgDesktop from "./../assets/home/background-home-desktop.jpg";
 import backgroundImgTablet from "./../assets/home/background-home-tablet.jpg";
 import backgroundImgMobile from "./../assets/home/background-home-mobile.jpg";
 
 import Picture from "../components/picture";
-
-import { Link } from "react-router-dom";
+import Page from "../components/UI/page";
 
 function Index() {
   const headingRef = useRef();
@@ -29,13 +29,7 @@ function Index() {
         />,
         document.getElementById("img-root")
       )}
-      <motion.div
-        className="flex items-end justify-between pr-5 mx-auto mt-60 max-w-7xl"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1 }}
-      >
+      <Page className="flex items-end justify-between pr-5 mt-60">
         <div className="flex flex-col">
           <h2 className="text-3xl tracking-widest uppercase">
             So, you want to travel to
@@ -59,7 +53,7 @@ function Index() {
         >
           Explore
         </Link>
-      </motion.div>
+      </Page>
     </Fragment>
   );
 }
