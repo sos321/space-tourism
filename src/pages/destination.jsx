@@ -38,13 +38,21 @@ function Destination() {
         document.getElementById("img-root")
       )}
       <Page>
-        <h3 className="flex gap-3 mb-8 text-2xl tracking-widest uppercase">
+        <h3 className="flex gap-3 mb-10 text-2xl tracking-widest uppercase">
           <span className="font-bold text-gray-500">01</span> Pick your
           destination
         </h3>
         <div className="flex flex-row-reverse items-center justify-between">
-          <div className="">
-            <Nav planet={planet} onClick={clickHandler} />
+          <div className="self-start">
+            <Nav
+              selected={planet}
+              onClick={clickHandler}
+              active="border-white border-solid border-b-2"
+              hover="border-transparent border-solid border-b-2 hover:border-white hover:border-solid hover:border-b-2 hover:border-opacity-50"
+              general="text-xl uppercase tracking-widest flex gap-2 h-full items-center transition-all"
+              title="name"
+              items={data.destinations}
+            />
             <h2 className="mb-6 uppercase text-8xl font-heading">
               {data.destinations[planet].name}
             </h2>
