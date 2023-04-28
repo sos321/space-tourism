@@ -37,7 +37,7 @@ function Navigation() {
           </div>
         </LayoutGroup>
       </div>
-      <div className="mt-48 mx-36">
+      <div className="h-[calc(100%-14rem)] max-w-[80%] mt-24 mx-auto">
         <Outlet />
       </div>
     </Fragment>

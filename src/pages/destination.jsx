@@ -37,13 +37,9 @@ function Destination() {
         />,
         document.getElementById("img-root")
       )}
-      <Page>
-        <h3 className="flex gap-3 mb-10 text-2xl tracking-widest uppercase">
-          <span className="font-bold text-gray-500">01</span> Pick your
-          destination
-        </h3>
+      <Page title="Pick your destination" num="01">
         <div className="flex flex-row-reverse items-center justify-between">
-          <div className="self-start">
+          <div>
             <Nav
               selected={planet}
               onClick={clickHandler}
@@ -80,7 +76,7 @@ function Destination() {
             </div>
           </div>
           <img
-            className="w-5/12 p-10 ml-8"
+            className="w-5/12 p-10"
             src={image}
             alt={data.destinations[planet].name}
           />

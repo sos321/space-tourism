@@ -37,20 +37,17 @@ function Crew() {
         />,
         document.getElementById("img-root")
       )}
-      <Page className="absolute bottom-0 w-full -translate-x-2/4 left-2/4">
-        <div className="flex flex-1 gap-20">
-          <div className="flex flex-col justify-center flex-1">
-            <h3 className="flex grow-[0.3] gap-3 text-2xl tracking-widest uppercase justify-self-start">
-              <span className="font-bold text-gray-500">02</span> Meet your crew
-            </h3>
-            <div className="flex-1 justify-self-center">
-              <h3 className="mb-3 text-3xl uppercase font-heading opacity-60">
+      <Page title="Meet your crew" num="02" className="relative">
+        <div className="absolute bottom-0 flex justify-between w-full h-full -translate-x-2/4 left-2/4">
+          <div className="flex flex-col justify-center">
+            <div>
+              <h3 className="mb-3 text-3xl uppercase font-heading opacity-60 ">
                 {data.crew[crew].role}
               </h3>
-              <h2 className="mb-8 text-6xl uppercase font-heading">
+              <h2 className="whitespace-nowrap mb-8 text-6xl uppercase font-heading min-[10rem]:">
                 {data.crew[crew].name}
               </h2>
-              <p className="w-8/12 mb-24 text-lg text-justify">
+              <p className="w-10/12 text-lg text-justify min-h-[21rem]">
                 {data.crew[crew].bio}
               </p>
               <Nav
@@ -64,7 +61,7 @@ function Crew() {
             </div>
           </div>
           <img
-            className="flex-shrink-0 w-5/12 h-5/12 aspect-[2/3]"
+            className="self-end w-auto h-full"
             src={image}
             alt={data.crew[crew].name}
           />

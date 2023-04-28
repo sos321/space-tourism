@@ -28,18 +28,21 @@ function Index() {
         />,
         document.getElementById("img-root")
       )}
-      <Page className="flex items-end justify-between pr-5 mt-60">
-        <div className="flex flex-col">
+      <Page className="flex items-center justify-between gap-5 pr-5 -mt-24 2xl:mt-0 2xl:justify-around lg:gap-24 lg:flex-col lg:items-center lg:justify-center">
+        <div className="flex flex-col lg:text-center">
           <h2 className="text-3xl tracking-widest uppercase">
             So, you want to travel to
           </h2>
           <h1
-            className="uppercase text-[9.2rem] font-heading mt-[-0.5rem] mx-0 w-fit"
+            className="lg:text-center uppercase text-[9.2rem] font-heading lg:-mb-4 -ml-[10px] lg:ml-0"
             ref={headingRef}
           >
             Space
           </h1>
-          <p className="w-1/3 text-lg text-justify" style={{ width: width }}>
+          <p
+            className="text-lg text-justify lg:text-center"
+            style={{ width: width }}
+          >
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this
