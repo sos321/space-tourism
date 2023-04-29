@@ -47,7 +47,7 @@ function Crew() {
               <h2 className="whitespace-nowrap mb-8 text-6xl uppercase font-heading min-[10rem]:">
                 {data.crew[crew].name}
               </h2>
-              <p className="w-10/12 text-lg text-justify min-h-[21rem]">
+              <p className="w-10/12 text-lg text-justify min-h-[10rem]">
                 {data.crew[crew].bio}
               </p>
               <Nav

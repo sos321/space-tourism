@@ -38,7 +38,7 @@ function Destination() {
         document.getElementById("img-root")
       )}
       <Page title="Pick your destination" num="01">
-        <div className="flex flex-row-reverse items-center justify-between">
+        <div className="flex flex-row-reverse items-center justify-between h-5/6">
           <div>
             <Nav
               selected={planet}

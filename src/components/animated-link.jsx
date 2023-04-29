@@ -2,8 +2,11 @@ import { NavLink } from "react-router-dom";
 import { motion, useCycle } from "framer-motion";
 import { Fragment } from "react";
 
+import useMediaQuery from "../hooks/useMediaQuery";
+
 export default function AnimatedLink(props) {
   const [origin, cycleOrigin] = useCycle(0, 1);
+  const isHoverable = useMediaQuery("(hover: hover) and (pointer:fine)");
 
   const hoverVariants = {
     idle: {
@@ -13,7 +16,6 @@ export default function AnimatedLink(props) {
       scaleX: 1,
     },
   };
-
   return (
     <motion.div
       className="h-full closest"
@@ -43,19 +45,21 @@ export default function AnimatedLink(props) {
                   layoutId="active"
                 ></motion.span>
               ) : (
-                <motion.span
-                  variants={hoverVariants}
-                  style={{
-                    position: "absolute",
-                    height: "2px",
-                    width: "100%",
-                    marginTop: "-2px",
-                    bottom: 0,
-                    backgroundColor: "#fff",
-                    opacity: 0.4,
-                    originX: origin,
-                  }}
-                ></motion.span>
+                isHoverable && (
+                  <motion.span
+                    variants={hoverVariants}
+                    style={{
+                      position: "absolute",
+                      height: "2px",
+                      width: "100%",
+                      marginTop: "-2px",
+                      bottom: 0,
+                      backgroundColor: "#fff",
+                      opacity: 0.4,
+                      originX: origin,
+                    }}
+                  ></motion.span>
+                )
               )}
             </Fragment>
           );
