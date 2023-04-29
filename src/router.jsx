@@ -12,12 +12,13 @@ export default function Router() {
 
   return (
     <Routes key={location.pathname} location={location}>
-      <Route path="/" element={<Navigation />} errorElement={<ErrorPage />}>
+      <Route path="/" element={<Navigation />}>
         <Route index element={<Index />} />
         <Route path="/destination" element={<Destination />} />
         <Route path="/crew" element={<Crew />} />
         <Route path="/technology" element={<Technology />} />
       </Route>
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 }
