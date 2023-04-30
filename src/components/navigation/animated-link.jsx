@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { motion, useCycle } from "framer-motion";
 import { Fragment } from "react";
 
-import useMediaQuery from "../hooks/useMediaQuery";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 export default function AnimatedLink(props) {
   const [origin, cycleOrigin] = useCycle(0, 1);

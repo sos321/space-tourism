@@ -1,9 +1,9 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-import Picture from "../components/picture";
+import Picture from "../components/UI/picture";
 import Page from "../components/UI/page";
-import ExploreBtn from "../components/explore";
+import ExploreBtn from "../components/index/explore-btn";
 
 import backgroundImgDesktop from "./../assets/home/background-home-desktop.jpg";
 import backgroundImgTablet from "./../assets/home/background-home-tablet.jpg";

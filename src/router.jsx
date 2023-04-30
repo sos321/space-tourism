@@ -2,7 +2,7 @@ import { useLocation, Route, Routes } from "react-router-dom";
 
 import Index from "./pages/index";
 import Destination from "./pages/destination";
-import Navigation from "./components/navigation";
+import Navigation from "./components/navigation/nav";
 import Technology from "./pages/technology";
 import Crew from "./pages/crew";
 import ErrorPage from "./pages/error-page";

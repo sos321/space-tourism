@@ -2,8 +2,8 @@ import { Fragment, useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 import Page from "../components/UI/page";
-import Picture from "../components/picture";
-import Nav from "../components/secondary-nav";
+import Picture from "../components/UI/picture";
+import Nav from "../components/navigation/secondary-nav";
 
 import data from "./../data/data.json";
 

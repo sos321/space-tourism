@@ -1,0 +1,9 @@
+TODO
+
+- Animate the main navigation based on direction
+- Optimize page jsx
+- Create crew and technology pages
+- Optimize for tablets and phones
+- some anims only on pc
+    - create global context for screen witdth
+    - populate the variants object conditionaly

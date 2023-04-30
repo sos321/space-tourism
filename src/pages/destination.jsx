@@ -1,9 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
-import Picture from "../components/picture";
-import Nav from "../components/secondary-nav";
+import Picture from "../components/UI/picture";
+import Nav from "../components/navigation/secondary-nav";
 import Page from "../components/UI/page";
+import DestinationText from "../components/destination/destination-text";
 
 import data from "../data/data.json";
 
@@ -49,31 +50,7 @@ function Destination() {
               title="name"
               items={data.destinations}
             />
-            <h2 className="mb-6 uppercase text-8xl font-heading">
-              {data.destinations[planet].name}
-            </h2>
-            <p className="max-w-lg mb-16 text-lg text-justify">
-              {data.destinations[planet].description}
-            </p>
-            <hr className="mb-7 h-[0.5px]" />
-            <div className="flex gap-16">
-              <div>
-                <p className="mb-2 tracking-wider uppercase text-md">
-                  Avg. Distance
-                </p>
-                <h5 className="text-3xl tracking-wider uppercase font-heading">
-                  {data.destinations[planet].distance}
-                </h5>
-              </div>
-              <div>
-                <p className="mb-2 tracking-wider uppercase text-md">
-                  Est. Travel Time
-                </p>
-                <h5 className="text-3xl tracking-wider uppercase font-heading">
-                  {data.destinations[planet].travel}
-                </h5>
-              </div>
-            </div>
+            <DestinationText destination={data.destinations[planet]} />
           </div>
           <img
             className="w-5/12 p-10"

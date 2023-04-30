@@ -2,10 +2,10 @@ import { Fragment, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { LayoutGroup } from "framer-motion";
 
-import NavLine from "./UI/nav-line";
+import NavLine from "./nav-line";
 import AnimatedLink from "./animated-link";
 
-import logo from "./../assets/shared/logo.svg";
+import logo from "/logo.svg";
 
 let xDir = 0;
 
