@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Picture(props) {
   return (
     <motion.picture
-      className="absolute top-0 left-0 w-full h-full pointer-events-none -z-40"
+      className="w-full h-full pointer-events-none"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -19,10 +19,7 @@ export default function Picture(props) {
         media="(min-width: 770px)"
         srcSet={props.tablet}
       />
-      <img
-        className="absolute block object-cover w-screen h-screen"
-        src={props.mobile}
-      />
+      <img className="block object-cover w-full h-full" src={props.mobile} />
     </motion.picture>
   );
 }

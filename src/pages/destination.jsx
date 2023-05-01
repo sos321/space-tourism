@@ -39,7 +39,7 @@ function Destination() {
         document.getElementById("img-root")
       )}
       <Page title="Pick your destination" num="01">
-        <div className="flex flex-row-reverse items-center justify-between h-5/6">
+        <div className="flex flex-row-reverse items-center justify-between lg:justify-center lg:text-center lg:flex-col-reverse h-[5/6]">
           <div>
             <Nav
               selected={planet}
@@ -53,7 +53,7 @@ function Destination() {
             <DestinationText destination={data.destinations[planet]} />
           </div>
           <img
-            className="w-5/12 p-10"
+            className="w-5/12 p-10 lg:w-6/12"
             src={image}
             alt={data.destinations[planet].name}
           />

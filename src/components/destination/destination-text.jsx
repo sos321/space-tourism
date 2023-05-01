@@ -6,11 +6,11 @@ export default function DestinationText({ destination }) {
       <h2 className="mb-6 uppercase text-8xl font-heading">
         {destination.name}
       </h2>
-      <p className="max-w-lg mb-16 text-lg text-justify">
+      <p className="max-w-lg mb-16 text-lg text-justify lg:text-center">
         {destination.description}
       </p>
       <hr className="mb-7 h-[0.5px]" />
-      <div className="flex gap-16">
+      <div className="flex items-center gap-16 lg:justify-around">
         <div>
           <p className="mb-2 tracking-wider uppercase text-md">Avg. Distance</p>
           <h5 className="text-3xl tracking-wider uppercase font-heading">
