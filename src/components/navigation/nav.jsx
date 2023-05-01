@@ -23,12 +23,12 @@ function Navigation() {
 
   return (
     <Fragment>
-      <div className="flex items-center justify-between h-16 mt-16">
-        <img src={logo} alt="Logo" className="ml-12" />
+      <div className="flex items-center justify-between w-full h-16 mt-16">
+        <img src={logo} alt="Logo" className="ml-12 lg:ml-5" />
         <NavLine />
         <LayoutGroup>
           <div
-            className="flex items-center justify-center w-7/12 h-24 gap-20 bg-white backdrop-blur-2xl bg-opacity-5"
+            className="flex items-center justify-center w-7/12 h-24 lg:gap-14 gap-[4.5rem] bg-white backdrop-blur-2xl bg-opacity-5"
             onMouseMoveCapture={updateDirection}
           >
             {["Home", "Destination", "Crew", "Technology"].map((nav, i) => (

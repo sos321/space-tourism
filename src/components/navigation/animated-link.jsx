@@ -36,7 +36,7 @@ export default function AnimatedLink(props) {
         {({ isActive }) => {
           return (
             <Fragment>
-              <span className="font-bold">{`0${props.i}`}</span>
+              <span className="font-bold lg:hidden">{`0${props.i}`}</span>
               {props.nav}
               {isActive ? (
                 <motion.span
