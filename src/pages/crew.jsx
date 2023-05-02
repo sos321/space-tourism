@@ -38,33 +38,34 @@ function Crew() {
         document.getElementById("img-root")
       )}
       <Page title="Meet your crew" num="02" className="relative">
-        <div className="absolute bottom-0 flex justify-between w-full h-full -translate-x-2/4 left-2/4">
-          <div className="flex flex-col justify-center">
-            <div>
-              <h3 className="mb-3 text-3xl uppercase font-heading opacity-60 ">
-                {data.crew[crew].role}
-              </h3>
-              <h2 className="whitespace-nowrap mb-8 text-6xl uppercase font-heading min-[10rem]:">
-                {data.crew[crew].name}
-              </h2>
-              <p className="w-10/12 text-lg text-justify min-h-[10rem]">
-                {data.crew[crew].bio}
-              </p>
-              <Nav
-                onClick={clickHandler}
-                items={data.crew}
-                general="w-3 h-3 rounded-full transition-all"
-                hover="hover:bg-gray-300 bg-gray-800"
-                active="bg-white"
-                selected={crew}
-              />
-            </div>
+        <div className="absolute bottom-0 flex justify-between w-full h-full md:relative md:gap-10 lg:items-center md:translate-y-0 lg:translate-y-20 lg:flex-col md:flex-col-reverse -translate-x-2/4 left-2/4">
+          <div className="flex flex-col justify-center max-w-md lg:text-center">
+            <h3 className="mb-3 text-3xl uppercase md:order-2 font-heading opacity-60 ">
+              {data.crew[crew].role}
+            </h3>
+            <h2 className="md:order-3 md:text-5xl whitespace-nowrap lg:whitespace-normal mb-8 text-6xl uppercase font-heading min-[10rem]:">
+              {data.crew[crew].name}
+            </h2>
+            <p className="w-full text-lg text-justify lg:text-center min-h-[10rem] md:order-4">
+              {data.crew[crew].bio}
+            </p>
+            <Nav
+              onClick={clickHandler}
+              items={data.crew}
+              general="w-3 h-3 rounded-full transition-all md:order-1"
+              hover="hover:bg-gray-300 bg-gray-800"
+              active="bg-white"
+              selected={crew}
+            />
           </div>
-          <img
-            className="self-end w-auto h-full"
-            src={image}
-            alt={data.crew[crew].name}
-          />
+          <div className="flex md:min-h-[21rem] items-end justify-center w-auto h-full lg:self-center sm:h-auto lg:w-7/12 hr:w-8/12 xl:w-5/12">
+            <img
+              className="w-auto h-full"
+              src={image}
+              alt={data.crew[crew].name}
+            />
+            <hr className="absolute h-[1px] md:block hidden w-[80vw] left-1/2 -translate-x-1/2" />
+          </div>
         </div>
       </Page>
     </Fragment>
