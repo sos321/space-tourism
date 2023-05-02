@@ -67,7 +67,7 @@
   }
 }
 
-@media (min-height: 1300px) and (min-width: 1000px) {
+@media (min-height: 1300px) and (min-width: 1000px) and (orientation: portrait) {
   html {
     font-size: 19px;
   }
