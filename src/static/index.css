@@ -66,3 +66,9 @@
     font-size: 13px;
   }
 }
+
+@media (min-height: 1300px) and (min-width: 1000px) {
+  html {
+    font-size: 19px;
+  }
+}
