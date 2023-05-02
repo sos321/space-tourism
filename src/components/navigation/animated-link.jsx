@@ -31,7 +31,7 @@ export default function AnimatedLink(props) {
     >
       <NavLink
         to={`/${props.nav === "Home" ? "" : props.nav.toLowerCase()}`}
-        className="relative flex items-center h-full gap-2 text-xl tracking-widest uppercase transition-all"
+        className="relative flex items-center h-full gap-2 text-xl tracking-widest uppercase transition-all sm:text-lg"
       >
         {({ isActive }) => {
           return (

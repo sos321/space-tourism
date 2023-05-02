@@ -60,3 +60,9 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 72.5rem) and (min-height: 52.1rem) {
+  html {
+    font-size: 13px;
+  }
+}

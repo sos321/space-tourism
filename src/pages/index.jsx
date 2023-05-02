@@ -28,13 +28,13 @@ function Index() {
         />,
         document.getElementById("img-root")
       )}
-      <Page className="flex items-center justify-between gap-5 pr-5 -mt-24 2xl:mt-0 2xl:justify-around lg:gap-24 lg:flex-col lg:items-center lg:justify-center">
-        <div className="flex flex-col lg:text-center">
+      <Page className="flex items-center justify-between gap-5 pr-5 -mt-24 md:pr-0 2xl:mt-0 2xl:justify-around lg:gap-24 lg:flex-col lg:items-center lg:justify-center">
+        <div className="flex flex-col gap-5 lg:text-center">
           <h2 className="text-3xl tracking-widest uppercase">
             So, you want to travel to
           </h2>
           <h1
-            className="lg:text-center uppercase text-[9.2rem] font-heading lg:-mb-4 -ml-[10px] lg:ml-0"
+            className="lg:text-center md:text-9xl uppercase text-[9.2rem] font-heading lg:-mb-4 -ml-[10px] lg:ml-0"
             ref={headingRef}
           >
             Space

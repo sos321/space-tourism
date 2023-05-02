@@ -10,7 +10,7 @@ export default function DestinationText({ destination }) {
         {destination.description}
       </p>
       <hr className="mb-7 h-[0.5px]" />
-      <div className="flex items-center gap-16 lg:justify-around">
+      <div className="flex items-center gap-16 xs:flex-col xs:gap-8 lg:justify-around">
         <div>
           <p className="mb-2 tracking-wider uppercase text-md">Avg. Distance</p>
           <h5 className="text-3xl tracking-wider uppercase font-heading">

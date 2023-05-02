@@ -5,7 +5,7 @@ export default function Page(props) {
     <motion.div
       className={`${
         props.className || ""
-      } w-full min-h-full h-content m-auto max-w-7xl pb-6`}
+      } w-full min-h-full h-content mx-auto max-w-7xl pb-6`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

@@ -53,7 +53,7 @@ function Destination() {
             <DestinationText destination={data.destinations[planet]} />
           </div>
           <img
-            className="w-5/12 p-10 lg:w-6/12"
+            className="w-5/12 p-10 lg:w-7/12 sm:w-9/12"
             src={image}
             alt={data.destinations[planet].name}
           />

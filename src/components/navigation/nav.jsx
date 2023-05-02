@@ -15,7 +15,7 @@ const links = ["Home", "Destination", "Crew", "Technology"];
 
 function Navigation() {
   const [dir, setDir] = useState(0);
-  const isMobile = useMediaQuery("(max-width: 665px)");
+  const isMobile = useMediaQuery("(max-width: 500px)");
 
   function updateDirection(e) {
     const xDirNew = e.clientX;
@@ -36,7 +36,7 @@ function Navigation() {
         ) : (
           <LayoutGroup>
             <div
-              className="flex items-center justify-center w-7/12 h-24 lg:gap-14 gap-[4.5rem] bg-white backdrop-blur-2xl bg-opacity-5"
+              className="flex items-center justify-center w-7/12 h-24 sm:gap-8 lg:gap-14 gap-[4.5rem] bg-white backdrop-blur-2xl bg-opacity-5"
               onMouseMoveCapture={updateDirection}
             >
               {links.map((nav, i) => (
@@ -46,7 +46,7 @@ function Navigation() {
           </LayoutGroup>
         )}
       </div>
-      <div className="h-[calc(100%-14rem)] max-w-[80%] mt-24 mx-auto">
+      <div className="h-[calc(100%-14rem)] max-w-[80%] mt-24 sm:mt-10 mx-auto">
         <Outlet />
       </div>
     </Fragment>
