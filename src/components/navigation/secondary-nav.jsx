@@ -4,7 +4,13 @@ export default function Nav(props) {
   }
 
   return (
-    <div className="flex items-center gap-10 mb-16 lg:justify-center">
+    <div
+      className={` ${
+        props.customDiv
+          ? props.customDiv
+          : "flex items-center gap-10 mb-16 lg:justify-center"
+      } `}
+    >
       {props.items.map((items, i) => (
         <button
           className={`${props.selected === i ? props.active : props.hover} ${
