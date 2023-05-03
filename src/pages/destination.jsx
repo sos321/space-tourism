@@ -44,9 +44,9 @@ function Destination() {
             <Nav
               selected={planet}
               onClick={clickHandler}
-              active="border-white border-solid border-b-2"
-              hover="border-transparent border-solid border-b-2 hover:border-white hover:border-solid hover:border-b-2 hover:border-opacity-50"
-              general="text-xl uppercase tracking-widest flex gap-2 h-full items-center transition-all"
+              active="border-white border-solid border-b-2 text-white"
+              hover="text-paragraph border-transparent border-solid border-b-2 hover:border-white hover:border-solid hover:border-b-2 hover:border-opacity-50"
+              general=" text-xl uppercase tracking-widest flex gap-2 h-full items-center transition-all"
               title="name"
               items={data.destinations}
             />

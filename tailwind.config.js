@@ -2,7 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        paragraph: "#D0D6F9",
+      },
+    },
     fontFamily: {
       heading: ["Bellefair", "serif"],
     },

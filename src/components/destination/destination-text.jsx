@@ -6,7 +6,7 @@ export default function DestinationText({ destination }) {
       <h2 className="mb-6 uppercase text-8xl font-heading">
         {destination.name}
       </h2>
-      <p className="max-w-lg mb-16 text-lg text-justify lg:text-center">
+      <p className="max-w-lg mb-16 text-lg leading-8 text-justify lg:text-center">
         {destination.description}
       </p>
       <hr className="mb-7 h-[0.5px]" />
