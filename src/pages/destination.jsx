@@ -6,7 +6,7 @@ import Nav from "../components/navigation/secondary-nav";
 import Page from "../components/UI/page";
 import DestinationText from "../components/destination/destination-text";
 
-import data from "../data/data.json";
+import { data } from "../data/data";
 
 import backgroundImgDesktop from "./../assets/destination/background-destination-desktop.jpg";
 import backgroundImgTablet from "./../assets/destination/background-destination-tablet.jpg";
@@ -14,19 +14,10 @@ import backgroundImgMobile from "./../assets/destination/background-destination-
 
 function Destination() {
   const [planet, setPlanet] = useState(0);
-  const [image, setImage] = useState("");
 
   function clickHandler(idx) {
     setPlanet(idx);
   }
-
-  useEffect(() => {
-    const url = `./../assets/destination/image-${data.destinations[
-      planet
-    ].name.toLowerCase()}.webp`;
-
-    setImage(new URL(url, import.meta.url).href);
-  }, [planet]);
 
   return (
     <Fragment>
@@ -54,7 +45,7 @@ function Destination() {
           </div>
           <img
             className="w-5/12 p-10 lg:w-7/12 sm:w-9/12"
-            src={image}
+            src={data.destinations[planet].images.webp}
             alt={data.destinations[planet].name}
           />
         </div>

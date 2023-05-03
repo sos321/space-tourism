@@ -5,7 +5,7 @@ import Page from "../components/UI/page";
 import Picture from "../components/UI/picture";
 import Nav from "../components/navigation/secondary-nav";
 
-import data from "./../data/data.json";
+import { data } from "../data/data";
 
 import backgroundImgDesktop from "./../assets/crew/background-crew-desktop.jpg";
 import backgroundImgTablet from "./../assets/crew/background-crew-tablet.jpg";
@@ -13,19 +13,10 @@ import backgroundImgMobile from "./../assets/crew/background-crew-mobile.jpg";
 
 function Crew() {
   const [crew, setCrew] = useState(0);
-  const [image, setImage] = useState();
 
   function clickHandler(crew) {
     setCrew(crew);
   }
-
-  useEffect(() => {
-    const names = data.crew[crew].name.toLowerCase().split(" ");
-
-    const url = `./../assets/crew/image-${names[0]}-${names[1]}.webp`;
-
-    setImage(new URL(url, import.meta.url).href);
-  }, [crew]);
 
   return (
     <Fragment>
@@ -61,7 +52,7 @@ function Crew() {
           <div className="flex md:min-h-[21rem] items-end justify-center w-auto h-full lg:self-center sm:h-auto lg:w-7/12 xl:w-5/12">
             <img
               className="w-auto h-full -z-10"
-              src={image}
+              src={data.crew[crew].images.webp}
               alt={data.crew[crew].name}
             />
             <hr className="absolute h-[1px] md:block hidden w-[80vw] left-1/2 -translate-x-1/2" />

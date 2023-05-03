@@ -7,7 +7,7 @@ import Nav from "../components/navigation/secondary-nav";
 
 import useMediaQuery from "../hooks/useMediaQuery";
 
-import data from "./../data/data.json";
+import { data } from "../data/data";
 
 import backgroundImgDesktop from "./../assets/technology/background-technology-desktop.jpg";
 import backgroundImgTablet from "./../assets/technology/background-technology-tablet.jpg";
@@ -15,22 +15,11 @@ import backgroundImgMobile from "./../assets/technology/background-technology-mo
 
 function Technology() {
   const [technology, setTechnology] = useState(0);
-  const [image, setImage] = useState();
   const isOneColumn = useMediaQuery("(max-width: 1023px)");
 
   function clickHandler(i) {
     setTechnology(i);
   }
-
-  useEffect(() => {
-    const names = data.technology[technology].name.toLowerCase().split(" ");
-
-    const url = `./../assets/technology/image-${names[0]}${
-      names[1] ? `-${names[1]}` : ""
-    }-${isOneColumn ? "landscape" : "portrait"}.jpg`;
-
-    setImage(new URL(url, import.meta.url).href);
-  }, [technology, isOneColumn]);
 
   return (
     <Fragment>
@@ -42,7 +31,11 @@ function Technology() {
         />,
         document.getElementById("img-root")
       )}
-      <Page title="Space launch 101" num="03">
+      <Page
+        title="Space launch 101"
+        num="03"
+        className="flex flex-col gap-20 lg:gap-3"
+      >
         <div className="flex items-center justify-between lg:gap-8 lg:text-center lg:flex-col">
           <Nav
             onClick={clickHandler}
@@ -67,7 +60,11 @@ function Technology() {
           </div>
           <img
             className="hr:w-4/12 lg:order-1 lg:w-full"
-            src={image}
+            src={
+              isOneColumn
+                ? data.technology[technology].images.landscape
+                : data.technology[technology].images.portrait
+            }
             alt={data.technology[technology].name}
           />
         </div>
