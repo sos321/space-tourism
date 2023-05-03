@@ -28,7 +28,7 @@ function Index() {
         />,
         document.getElementById("img-root")
       )}
-      <Page className="flex items-center justify-center pr-5 -mt-24 hr:gap-48 gap-80 md:pr-0 2xl:mt-0 2xl:justify-around lg:gap-24 lg:flex-col lg:items-center lg:justify-center">
+      <Page className="flex items-center justify-center pr-5 -mt-24 hr:gap-48 gap-[32rem] md:pr-0 2xl:mt-0 2xl:justify-around lg:gap-24 lg:flex-col lg:items-center lg:justify-center">
         <div className="flex flex-col gap-5 lg:text-center">
           <h2 className="-mb-5 text-3xl tracking-widest uppercase lg:mb-0 text-paragraph">
             So, you want to travel to
