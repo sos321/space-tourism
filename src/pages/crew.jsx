@@ -58,9 +58,9 @@ function Crew() {
               selected={crew}
             />
           </div>
-          <div className="flex md:min-h-[21rem] items-end justify-center w-auto h-full lg:self-center sm:h-auto lg:w-7/12 hr:w-8/12 xl:w-5/12">
+          <div className="flex md:min-h-[21rem] items-end justify-center w-auto h-full lg:self-center sm:h-auto lg:w-7/12 xl:w-5/12">
             <img
-              className="w-auto h-full"
+              className="w-auto h-full -z-10"
               src={image}
               alt={data.crew[crew].name}
             />
