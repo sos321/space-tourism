@@ -11,7 +11,7 @@ export default function Picture(props) {
     >
       <source
         className="absolute block object-cover w-screen h-screen"
-        media="(min-width: 1440px)"
+        media="(min-width: 1024px)"
         srcSet={props.desktop}
       />
       <source
@@ -19,7 +19,11 @@ export default function Picture(props) {
         media="(min-width: 770px)"
         srcSet={props.tablet}
       />
-      <img className="block object-cover w-full h-full" src={props.mobile} />
+      <img
+        className="block object-cover w-full h-full"
+        src={props.mobile}
+        alt="background-image"
+      />
     </motion.picture>
   );
 }
