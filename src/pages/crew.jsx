@@ -44,7 +44,7 @@ function Crew() {
               onClick={clickHandler}
               items={data.crew}
               general="w-3 h-3 rounded-full transition-all md:order-1"
-              hover="hover:bg-gray-300 bg-gray-800"
+              hover="hover:bg-gray-300 bg-gray-500"
               active="bg-white"
               selected={crew}
             />

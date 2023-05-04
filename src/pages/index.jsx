@@ -1,4 +1,4 @@
-import { Fragment, useLayoutEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 import Picture from "../components/UI/picture";
@@ -14,8 +14,19 @@ function Index() {
 
   const [width, setWidth] = useState(0);
 
-  useLayoutEffect(() => {
-    setWidth(headingRef.current.offsetWidth - 5);
+  useEffect(() => {
+    if (width === 0) {
+      setWidth(headingRef.current.clientWidth - 5);
+    }
+
+    function listener() {
+      setWidth(headingRef.current.clientWidth - 5);
+      console.log("resize");
+    }
+
+    window.addEventListener("resize", listener);
+
+    return () => window.removeEventListener("resize", listener);
   }, []);
 
   return (
@@ -34,7 +45,7 @@ function Index() {
             So, you want to travel to
           </h2>
           <h1
-            className="lg:text-center md:text-9xl uppercase text-[9.2rem] font-heading lg:-mb-4 -ml-[10px] lg:ml-0"
+            className="max-w-max lg:text-center md:text-9xl uppercase text-[9.2rem] font-heading lg:-mb-4 -ml-[10px] lg:ml-0"
             ref={headingRef}
           >
             Space
